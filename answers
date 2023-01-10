@@ -1,0 +1,92 @@
+Answer 1:
+Github URL: https://github.com/sahasukanta
+
+Answer 2:
+requests version: 2.28.1
+
+Answer 3:
+requests version: 2.28.0 (installed that specific version with ==2.28.0)
+
+Answer 4:
+The venv is a "virtual" environment isolated from the global environment. This helps because having a seperated environment enhances code sharing and collaboration within a team. When creating a new environment, everything is new and only has the base libraries and packages like the python standard library. Even the python interpreter version may be specified which could be different from the global version.
+
+Answer 5:
+Status code 301 is returned. For 200, we must visit http://www.google.com/ as specified in the href attribute.
+
+Answer 6:
+With -i only, I got status code 301. With -iL I got 418.
+When curling to http://google.com/ without -L, it won't redirect. When curling to http://www.google.com/ in general, it returns the http response as html.
+
+
+Answer 7:
+DIFF:
+
+-i -X POST -d "X=Y"
+---
+-i
+
+
+<DT>X: <i>&lt;type 'instance'&gt;</i>
+<DD>MiniFieldStorage('X', 'Y')
+---
+<P>No form fields.
+
+<DT> CONTENT_LENGTH <DD> 3
+<DT> CONTENT_TYPE <DD> application/x-www-form-urlencoded
+---
+n/a
+
+n/a
+---
+<DT> HTTPS <DD> on
+
+<DT> REMOTE_PORT <DD> 59719
+<DT> REQUEST_METHOD <DD> POST
+<DT> REQUEST_SCHEME <DD> http
+---
+<DT> REMOTE_PORT <DD> 59730
+<DT> REQUEST_METHOD <DD> GET
+<DT> REQUEST_SCHEME <DD> https
+
+<DT> SERVER_PORT <DD> 80
+---
+<DT> SERVER_PORT <DD> 443
+
+<DT> SERVER_SIGNATURE <DD> &lt;address&gt;Apache/2.4.6 (CentOS) Server at webdocs.cs.ualberta.ca Port 80&lt;/address&gt;
+---
+<DT> SERVER_SIGNATURE <DD> &lt;address&gt;Apache/2.4.6 (CentOS) Server at webdocs.cs.ualberta.ca Port 443&lt;/address&gt;
+
+<DT> UNIQUE_ID <DD> Y7y9O5OzQgycOkoALIJsfwAAAAI
+---
+<DT> SSL_TLS_SNI <DD> webdocs.cs.ualberta.ca
+<DT> UNIQUE_ID <DD> Y7y9QG-jW9SEJc0KYbryoAAAAAM
+
+<DT> CONTENT_LENGTH <DD> 3
+<DT> CONTENT_TYPE <DD> application/x-www-form-urlencoded
+---
+n/a
+
+<DT> REMOTE_PORT <DD> 59719
+<DT> REQUEST_METHOD <DD> POST
+<DT> REQUEST_SCHEME <DD> http
+---
+<DT> REMOTE_PORT <DD> 59730
+<DT> REQUEST_METHOD <DD> GET
+<DT> REQUEST_SCHEME <DD> https
+
+<DT> SERVER_PORT <DD> 80
+---
+<DT> SERVER_PORT <DD> 443
+
+<DT> SERVER_SIGNATURE <DD> &lt;address&gt;Apache/2.4.6 (CentOS) Server at webdocs.cs.ualberta.ca Port 80&lt;/address&gt;
+---
+<DT> SERVER_SIGNATURE <DD> &lt;address&gt;Apache/2.4.6 (CentOS) Server at webdocs.cs.ualberta.ca Port 443&lt;/address&gt;
+
+<DT> UNIQUE_ID <DD> Y7y9O5OzQgycOkoALIJsfwAAAAI
+---
+<DT> SSL_TLS_SNI <DD> webdocs.cs.ualberta.ca
+<DT> UNIQUE_ID <DD> Y7y9QG-jW9SEJc0KYbryoAAAAAM
+
+First one is a default GET request, while second is a POST request. There is also a <DD>MiniFieldStorage('X', 'Y') but there is <P>No form fields.
+
+
